@@ -102,20 +102,29 @@ header .mojitume {
 /* ---------------------------
 　メイン
 ---------------------------- */
-
 .top {
+  height: 100vh;
+}
+
+.top-inner {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  padding-bottom: 100px;
   margin: 0 0 70px 280px;
-  width: 503px;
+  width: 80%;
+  height: 100%;
 }
 
 main {
   margin: 100px 50px 0 0;
   border-radius: 40px;
   position: relative;
+  top: 0;
+  left: 0;
+  /* width: 50%; */
+  height: 90%;
 }
 
 .main-visual p {
@@ -132,11 +141,16 @@ main {
 
 .main-visual img {
   border-radius: 25px;
-
+  height: 100%;
+  width: 100%;
+  min-width: 500px;
+  object-fit: cover;
 }
 
 .main-visual {
   margin-bottom: 10px;
+  height: 100%;
+
 }
 
 .breadcrumb ul {
@@ -151,19 +165,38 @@ main {
   margin: 0 10px 60px 0;
 }
 
-main .main-copy {
+main .main-copy-first {
   color: #d97d7d;
   font-family: source-han-sans-japanese, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 30px;
+  font-size: 27px;
   background-color: #fff;
-  padding: 20px 30px;
+  padding: 0 10px 0 20px;
   letter-spacing: 2px;
   position: absolute;
-  top: 520px;
-  left: 350px;
-  width: 800px;
+  top: 70%;
+  right: 50px;
+  width: 300px;
+  height: 60px;
+  line-height: 60px;
+}
+
+main .main-copy-second {
+  color: #d97d7d;
+  font-family: source-han-sans-japanese, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 27px;
+  background-color: #fff;
+  padding: 0 10px;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 83%;
+  right: -20px;
+  width: 300px;
+  height: 60px;
+  line-height: 60px;
 }
 
 
@@ -227,7 +260,7 @@ aside .contact .fa-line {
 aside .news {
   background-color: #F7E4E4;
   border-radius: 25px;
-  padding: 30px 30px 20px 30px;
+  padding: 25px 30px 5px 30px;
   margin-bottom: 30px;
 }
 
@@ -238,7 +271,7 @@ aside .news .news-hedder {
   align-items: center;
   padding-bottom: 20px;
   border-bottom: 1px dotted #d97d7d;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 aside .news .news-hedder h2 {
@@ -321,7 +354,7 @@ aside .alignment .information-session-top a {
   border: 2px solid #d97d7d;
   padding: 10px;
   border-radius: 5px;
-  margin: 150px 0 10px 0;
+  margin: 20px 0 10px 0;
   font-size: 15px;
   display: block;
   text-align: center;
@@ -351,9 +384,6 @@ aside .alignment .sns-icon i {
 aside .alignment .sns-icon i:hover {
   color: #63BFAA;
 }
-
-
-
 
 
 /* ---------------------------
@@ -460,25 +490,36 @@ footer .footre-address .copyright {
 　　トップページ（学校紹介）　コンテンツ promise
 ---------------------------------------------- */
 
+
+
 .inner {
   background-color: #f8f8f3;
-  padding: 100px 0;
+  padding: 150px 0;
+  margin-top: 50px;
 }
 
 .inner .promise-contents {
-  width: 1250px;
   display: flex;
   align-items: flex-start;
   margin-left: 280px;
 }
 
+.inner .img-dog {
+  width: 40%;
+}
+
+
 .inner .img-dog img {
   border-radius: 30px;
-  margin-right: 50px;
+  margin-right: 580px;
+  margin-left: 30px;
+  width: 80%;
+  min-height: 680px;
+  object-fit: cover;
 }
 
 .inner .paragraph {
-  width: 400px;
+  width: 40%;
 }
 
 .inner h3 {
@@ -489,12 +530,12 @@ footer .footre-address .copyright {
   padding: 20px 0;
   border-bottom: 5px solid #d97d7d;
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .inner section {
   border-bottom: 1px solid #d97d7d;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .inner section:last-child {
@@ -503,7 +544,7 @@ footer .footre-address .copyright {
 }
 
 .inner h4 {
-  font-size: 25px;
+  font-size: 20px;
   font-family: source-han-sans-japanese, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -512,7 +553,7 @@ footer .footre-address .copyright {
 }
 
 .inner p {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 
@@ -521,9 +562,9 @@ footer .footre-address .copyright {
 ---------------------------------------------- */
 
 .contents-point {
-  width: 970px;
+  width: 920px;
   margin-left: 280px;
-  padding: 100px 0;
+  padding: 150px 0;
 }
 
 .contents-point h3 {
@@ -533,7 +574,7 @@ footer .footre-address .copyright {
   font-weight: 700;
   font-style: normal;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 .contents-point .card {
@@ -544,7 +585,11 @@ footer .footre-address .copyright {
 }
 
 .contents-point .card section {
-  width: 300px;
+  width: 280px;
+}
+
+.contents-point .card section img.picture {
+  width: 100%;
 }
 
 .contents-point .card section img {
@@ -603,9 +648,9 @@ footer .footre-address .copyright {
 }
 
 .opencampus-contents {
-  height: 700px;
-  width: 415px;
-  margin-left: 557px;
+  height: 800px;
+  width: 530px;
+  margin-left: 34%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -662,28 +707,63 @@ footer .footre-address .copyright {
 　専攻紹介
 ---------------------------- */
 
+#course .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 100px;
+  margin: 0 0 70px 280px;
+  width: 80%;
+  height: 100%;
+}
+
+#course main {
+  margin: 100px 50px 0 0;
+  border-radius: 40px;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+#course .main-visual p {
+  position: absolute;
+  top: 80px;
+  left: 38%;
+  letter-spacing: 10px;
+  color: #fff;
+  font-size: 30px;
+  font-family: source-han-sans-japanese, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#course .top .main-visual {
+  width: 100%;
+}
 
 #course .back-color-first {
   background-color: #fff;
-  height: 240px;
+  height: 260px;
   background-size: cover;
 }
 
 #course .back-color-second {
   background-color: #f8f8f3;
-  height: 1560px;
+  height: 1670px;
   background-size: cover;
 }
 
 #course .back-color-third {
   background-color: #fff;
-  height: 1690px;
+  height: 1730px;
   background-size: cover;
 }
 
 #course .back-color-forth {
   background-color: #f8f8f3;
-  height: 1650px;
+  height: 1700px;
   background-size: cover;
 }
 
@@ -693,12 +773,12 @@ footer .footre-address .copyright {
 }
 
 #course .explanation {
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 60px;
+  width: 85%;
+  margin: 80px auto 60px auto;
 }
 
 #course .explanation .left {
@@ -729,7 +809,8 @@ footer .footre-address .copyright {
 }
 
 #course .profession {
-  margin-bottom: 40px;
+  width: 85%;
+  margin: 0 auto 40px auto;
 }
 
 #course .profession h3 {
@@ -749,7 +830,8 @@ footer .footre-address .copyright {
 }
 
 #course .certification {
-  margin-bottom: 40px;
+  width: 85%;
+  margin: 0 auto 40px auto;
 }
 
 #course .certification h3 {
@@ -779,7 +861,8 @@ footer .footre-address .copyright {
 }
 
 #course .classwork {
-  margin-bottom: 40px;
+  width: 85%;
+  margin: 0 auto 40px auto;
 }
 
 #course .classwork h3 {
@@ -825,21 +908,57 @@ footer .footre-address .copyright {
 ---------------------------- */
 
 
+#info .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 100px;
+  margin: 0 0 70px 280px;
+  width: 80%;
+  height: 100%;
+}
+
+#info main {
+  margin: 100px 50px 0 0;
+  border-radius: 40px;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+#info .main-visual p {
+  position: absolute;
+  top: 80px;
+  left: 38%;
+  letter-spacing: 10px;
+  color: #fff;
+  font-size: 30px;
+  font-family: source-han-sans-japanese, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#info .top .main-visual {
+  width: 100%;
+}
+
 #info .back-color-first {
   background-color: #fff;
-  height: 240px;
+  height: 260px;
   background-size: cover;
 }
 
 #info .back-color-second {
   background-color: #f8f8f3;
-  height: 600px;
+  height: 640px;
   background-size: cover;
 }
 
 #info .back-color-third {
   background-color: #fff;
-  height: 700px;
+  height: 740px;
   background-size: cover;
 }
 
@@ -858,6 +977,11 @@ footer .footre-address .copyright {
   color: #d97d7d;
   font-size: 25px;
   text-align: center;
+}
+
+#info .info-table {
+  width: 85%;
+  margin: 0 auto;
 }
 
 #info .teiin h3 {
@@ -899,6 +1023,10 @@ footer .footre-address .copyright {
   border-bottom: 1px solid #d97d7d;
 }
 
+#info .cost {
+  padding-top: 50px;
+}
+
 #info .cost table {
   text-indent: 10px;
   margin-bottom: 15px;
@@ -929,45 +1057,39 @@ footer .footre-address .copyright {
   margin-bottom: 20px;
 }
 
-/* #info .shiryou {
-  height: 500px;
-  background-image: url(../images/info-img-2column.jpg);
-  background-size: cover;
-} */
-
 #info .wrapper {
   display: flex;
   flex-direction: row;
   height: 500px;
   width: 100%;
-  background-color: blue;
 }
 
 #info .column {
-  /* height: 60vh; */
   width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: end;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* 要素をセンターに */
 }
 
 #info .info {
-  width: 500px;
   height: 380px;
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* 要素を縦に */
 }
 
 #info .first {
-  margin: auto -100px auto 0;
+  margin: auto 0 auto 50%;
+  width: 100%;
 }
 
 #info .second {
-  margin: auto 100px auto 0;
+  margin: auto 0;
+  width: 100%;
 }
 
 #info .info .pandbtn {
@@ -1009,13 +1131,15 @@ footer .footre-address .copyright {
 #info .shiryou {
   background: url(../images/lion.jpg) no-repeat top center;
   background-size: cover;
-  width: 1600px;
+  object-fit: cover;
+  width: 55%;
   padding-right: 90px;
 }
 
 #info .open {
   background: url(../images/kawauso.jpg) no-repeat top center;
   background-size: cover;
-  padding-left: 30px;
-  padding-right: 120px;
+  object-fit: cover;
+  width: 45%;
+  padding-right: 20px;
 }
